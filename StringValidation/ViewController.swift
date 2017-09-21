@@ -8,18 +8,58 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController {
+    
+    
+    // MARK: - Outlets
+    @IBOutlet weak var email: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+    // MARK: - UI Actions
+    @IBAction func proceed(_ sender: Any) {
+        
+        if String().isValidCpf(email.text!) {
+            //
+            print("👍")
+        }else{
+            print("👎")
+        }
 
+
+        
+        /*
+        if isValidEmail(email.text!) {
+            // result OK
+            print("👍")
+        }else{
+            print("👎")
+        }
+        */
+        
+        
+        /*
+        if isValidCpf(email.text!) {
+            // result OK
+            print("👍 for CPF")
+        }else{
+            print("👎 for CPF")
+        }
+        */
+        
+        
+    }
+    
+    
+    
+    
 
 }
 
